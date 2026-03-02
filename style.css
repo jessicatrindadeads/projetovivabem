@@ -1,0 +1,414 @@
+@import url("https://fonts.googleapis.com/css2?family=Chau+Philomene+One:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+header {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("./img/bannerHeader.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right center;
+}
+header .boxHeader {
+  margin-top: 30px;
+  width: 85%;
+  height: 80px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+  background: linear-gradient(to right, #4247a2, #52b095);
+}
+header .boxHeader nav {
+  display: flex;
+  gap: 50px;
+}
+header .boxHeader nav a {
+  color: white;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+}
+
+.boxBanner {
+  width: 80%;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+}
+.boxBanner .boxTitulo {
+  width: 50%;
+  max-width: 600px;
+}
+.boxBanner .boxTitulo h1 {
+  font-size: 52px;
+  font-weight: bold;
+  line-height: 1.2;
+  background: linear-gradient(to right, #4247a2, #52b095);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.boxBanner .boxTitulo p {
+  font-size: 24px;
+  color: #04031C;
+  margin-top: 20px;
+}
+.boxBanner .boxTitulo .boxButton {
+  margin-top: 30px;
+  display: flex;
+  gap: 20px;
+}
+.boxBanner .boxTitulo .boxButton .buttonIdade {
+  width: 260px;
+  height: 48px;
+  border-radius: 12px;
+  border: none;
+  color: white;
+  background-color: #1173D4;
+  font-size: 16px;
+  cursor: pointer;
+}
+.boxBanner .boxTitulo .boxButton .buttonMais {
+  width: 170px;
+  height: 48px;
+  border-radius: 12px;
+  border: 1px solid #1173D4;
+  color: #1173D4;
+  background-color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.boxCardConteudo {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.boxConteudo {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #f3f4f6;
+  font-family: Arial, sans-serif;
+}
+.boxConteudo h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  background: linear-gradient(90deg, #1173D4, #33CC73);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.boxConteudo p {
+  max-width: 800px;
+  margin: 0 auto 40px auto;
+  font-size: 18px;
+  color: #333;
+  line-height: 1.6;
+}
+
+.cardConteudo {
+  background-color: white;
+  width: 260px;
+  padding: 30px 20px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+.cardConteudo img {
+  width: 60px;
+  margin-bottom: 15px;
+}
+.cardConteudo h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #222;
+}
+.cardConteudo p {
+  font-size: 16px;
+  color: #555;
+}
+
+.containerPrevencaoFeminina {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.boxPrevencaoFeminina {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #e9dddd;
+  font-family: Arial, sans-serif;
+}
+.boxPrevencaoFeminina h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: #d05aa0;
+  background: linear-gradient(90deg, #D038AA, #F9016F, #930885, #851C87);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.cardFeminina {
+  background-color: white;
+  width: 280px;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  transition: 0.3s;
+}
+.cardFeminina img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+  margin: 0 auto 15px auto;
+}
+.cardFeminina h3 {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 18px;
+  color: #222;
+}
+.cardFeminina ul {
+  padding-left: 18px;
+}
+.cardFeminina li {
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #444;
+}
+
+.containerPrevencaoMasculina {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.boxPrevencaoMasculina {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #eeeeee;
+  font-family: Arial, sans-serif;
+}
+.boxPrevencaoMasculina h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+  background: linear-gradient(90deg, #0074EE, #3373D2, #5EA7EF, #6F95C7, #7BB5F5);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.cardMasculina {
+  background-color: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  transition: 0.3s;
+  width: 280px;
+}
+.cardMasculina img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+  margin: 0 auto 15px auto;
+}
+.cardMasculina h3 {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 18px;
+  color: #222;
+}
+.cardMasculina ul {
+  padding-left: 18px;
+}
+.cardMasculina li {
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #444;
+}
+
+.alertasImportantes {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #f5f5f5;
+  font-family: Arial, sans-serif;
+}
+.alertasImportantes h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+  background: linear-gradient(90deg, #1173D4, #33CC73);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.alertasContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.alertCard {
+  width: 410px;
+  height: 170px;
+  padding: 25px;
+  border-radius: 10px;
+}
+.alertCard img {
+  width: 30px;
+}
+
+h3 {
+  display: flex;
+  font-weight: 700;
+  font-style: bold;
+  font-size: 20px;
+  line-height: 45px;
+  align-items: center;
+  gap: 10px;
+}
+
+p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  align-items: center;
+}
+
+.rosa {
+  background-color: #F9D5E5;
+}
+.rosa h3, .rosa p {
+  color: #AD346A;
+}
+
+.azul {
+  background-color: #CFE2F3;
+}
+.azul h3, .azul p {
+  color: #2769A3;
+}
+
+.verde {
+  background-color: #D4EDDA;
+}
+.verde h3, .verde p {
+  color: #244A2D;
+}
+
+.amarelo {
+  background-color: #FFE9C2;
+}
+.amarelo h3, .amarelo p {
+  color: #976C00;
+}
+
+.footer {
+  background-color: #313461;
+  color: white;
+  padding: 50px 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+.footerContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footerApoio {
+  width: 30%;
+}
+.footerApoio h3 {
+  margin-bottom: 15px;
+}
+.footerApoio ul {
+  list-style: none;
+}
+.footerApoio li {
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+.footerApoio p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.footerLogo {
+  width: 130px;
+  margin-bottom: 10px;
+}
+
+.footerFrase {
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.footerRodape {
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  margin-top: 40px;
+  padding-top: 20px;
+  text-align: center;
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  .boxHeader {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+    gap: 10px;
+  }
+  nav {
+    gap: 20px;
+  }
+  .boxTitulo {
+    width: 100%;
+    text-align: center;
+  }
+  .boxButton {
+    flex-direction: column;
+    align-items: center;
+  }
+  .cardFeminina,
+  .cardMasculina {
+    width: 90%;
+  }
+  .footerContainer {
+    flex-direction: column;
+    gap: 30px;
+  }
+}/*# sourceMappingURL=style.css.map */
