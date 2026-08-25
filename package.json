@@ -1,0 +1,13 @@
+{
+  "name": "projeto-viva-bem",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "sass style.scss style.css --style=expanded --no-source-map",
+    "check": "html-validate index.html"
+  },
+  "devDependencies": {
+    "html-validate": "^10.4.0",
+    "sass": "^1.92.1"
+  }
+}
