@@ -1,285 +1,251 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Viva Bem: projeto educacional sobre saúde preventiva, vacinação e acompanhamento profissional em diferentes fases da vida.">
+    <meta name="theme-color" content="#4247a2">
+    <link rel="icon" href="./img/LogoVivaBem.png" type="image/png">
     <link rel="stylesheet" href="style.css">
-    <title>Viva Bem</title>
+    <script src="script.js" defer></script>
+    <title>Viva Bem | Saúde preventiva</title>
   </head>
   <body>
+    <a class="skipLink" href="#conteudo-principal">Ir para o conteúdo principal</a>
 
-    <header>
-
+    <header id="inicio">
       <div class="boxHeader">
-        <img src="./img/LogoVivaBem.png" alt="Logo do site viva bem" />
-        <nav>
-          <a href="">Prevenção Masculina</a>
-          <a href="">Prevenção Feminina</a>
+        <a class="brandLink" href="#inicio" aria-label="Viva Bem: voltar ao início">
+          <img src="./img/LogoVivaBem.png" alt="Viva Bem" width="130" height="45">
+        </a>
+
+        <button class="menuToggle" type="button" aria-label="Abrir menu de navegação" aria-controls="main-navigation" aria-expanded="false">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </button>
+
+        <nav id="main-navigation" aria-label="Navegação principal">
+          <a href="#prevencao-masculina">Prevenção masculina</a>
+          <a href="#prevencao-feminina">Prevenção feminina</a>
         </nav>
       </div>
 
-      <section class="boxBanner">
+      <section class="boxBanner" aria-labelledby="hero-title">
         <div class="boxTitulo">
-          <h1>Cuidar da saúde é um ato de amor</h1>
-          <p>Confira os principais exames de prevenção por faixa etária.</p>
+          <h1 id="hero-title">Cuidar da saúde é um ato de amor</h1>
+          <p>Conheça cuidados preventivos e converse com profissionais de saúde sobre suas necessidades.</p>
           <div class="boxButton">
-            <button class="buttonIdade">Ver Agenda por Idade</button>
-            <button class="buttonMais">Saiba Mais</button>
+            <a class="buttonIdade" href="#prevencao-feminina">Ver cuidados por idade</a>
+            <a class="buttonMais" href="#importancia">Saiba mais</a>
           </div>
         </div>
       </section>
-
     </header>
 
-    <main>
+    <main id="conteudo-principal">
+      <section class="boxConteudo" id="importancia" aria-labelledby="importance-title">
+        <h2 id="importance-title">A importância dos cuidados preventivos</h2>
+        <p>A prevenção envolve vacinação, hábitos saudáveis e acompanhamento profissional. A indicação de exames depende da idade, dos sintomas, do histórico familiar e de outros fatores individuais.</p>
 
-        <section class="boxConteudo">
-          <h2>A Importância dos Exames de Rotina</h2>
-          <p>Os exames preventivos são fundamentais para detectar doenças em estágios iniciais, quando o tratamento é mais eficaz e menos invasivo. Manter uma rotina de check-ups regulares pode salvar vidas e garantir uma melhor qualidade de vida para você e sua família.
-          </p>
+        <div class="boxCardConteudo">
+          <article class="cardConteudo">
+            <img src="./img/check.png" alt="" width="60" height="60" loading="lazy">
+            <h3>Detecção precoce</h3>
+            <p>Reconheça sinais de alerta e procure orientação profissional.</p>
+          </article>
 
-          <div class="boxCardConteudo">
-          
-            <div class="cardConteudo">
-              <img src="./img/check.png" alt="Ícone check" />
-              <h3>Detecção Precoce</h3>
-              <p>Identifique problemas antes que se tornem graves</p>
-            </div>
+          <article class="cardConteudo">
+            <img src="./img/apoioFamilia.png" alt="" width="60" height="60" loading="lazy">
+            <h3>Cuidado familiar</h3>
+            <p>Compartilhe informações confiáveis e incentive o acompanhamento.</p>
+          </article>
 
-            <div class="cardConteudo">
-              <img src="./img/apoioFamilia.png" alt="Ícone de apoio familiar" />
-              <h3>Cuidado Familiar</h3>
-              <p>Proteja toda a família com exames regulares</p>
-            </div>
+          <article class="cardConteudo">
+            <img src="./img/apoioFamilia2.png" alt="" width="60" height="60" loading="lazy">
+            <h3>Qualidade de vida</h3>
+            <p>Construa uma rotina de cuidados adequada à sua realidade.</p>
+          </article>
+        </div>
+      </section>
 
-            <div class="cardConteudo">
-              <img src="./img/apoioFamilia2.png" alt="Ícone de coração" />
-              <h3>Qualidade de Vida</h3>
-              <p>Viva mais e melhor com prevenção adequada</p>
-            </div> 
-            
-          </div>
-        </section>
+      <section class="boxPrevencaoFeminina" id="prevencao-feminina" aria-labelledby="female-title">
+        <h2 id="female-title">Prevenção feminina</h2>
+        <p class="sectionIntro">As recomendações abaixo são informativas. A indicação e a frequência dos exames devem ser definidas com a equipe de saúde.</p>
 
-        <section class="boxPrevencaoFeminina">
-          <h2>Prevenção Feminina</h2>
+        <div class="containerPrevencaoFeminina">
+          <article class="cardFeminina">
+            <img src="./img/vacina.webp" alt="Pessoa recebendo uma vacina" width="90" height="90" loading="lazy">
+            <h3>A partir dos 15 anos</h3>
+            <ul>
+              <li>Verifique a carteira de vacinação conforme o calendário do SUS.</li>
+              <li>Busque orientação sobre saúde menstrual, prevenção de ISTs e contracepção.</li>
+            </ul>
+          </article>
 
-          <div class="containerPrevencaoFeminina">
-          
-            <div class="cardFeminina">
-              <img src="./img/vacina.jpg" alt="Ícone mulher tomando vacina" />
-              <h3>A partir dos 15 anos</h3>
-                <ul>
-                    <li>Vacinação em dia (HPV, tétano, hepatite B, influenza, covid)</li>
-                    <li>Consulta ginecológica inicial (orientação sobre saúde menstrual, contracepção e prevenção de ISTs)</li>
-                </ul>            
-            </div>
+          <article class="cardFeminina">
+            <img src="./img/coletaSangue.webp" alt="Profissional realizando coleta de sangue" width="90" height="90" loading="lazy">
+            <h3>A partir dos 20 anos</h3>
+            <ul>
+              <li>Converse sobre alimentação, saúde mental, pressão arterial e hábitos saudáveis.</li>
+              <li>Realize avaliações odontológicas, oftalmológicas ou laboratoriais quando indicadas.</li>
+            </ul>
+          </article>
 
-            <div class="cardFeminina">
-              <img src="./img/coletaSangue.png" alt="Ícone enfermeira coletando sangue"/>
-              <h3>A partir dos 20 anos</h3>
-                <ul>
-                    <li>Exames de sangue e urina anuais (hemograma, glicose, colesterol, função renal e hepática)</li>
-                    <li>Check-up odontológico e oftalmológico</li>
-                    <li>Exame dermatológico (rastreamento de câncer de pele)</li>
-                </ul>            
-            </div>
+          <article class="cardFeminina">
+            <img src="./img/exameHPV.webp" alt="Atendimento preventivo relacionado à saúde ginecológica" width="90" height="90" loading="lazy">
+            <h3>Dos 25 aos 64 anos</h3>
+            <ul>
+              <li>Pessoas com colo do útero e histórico de atividade sexual devem conversar sobre rastreamento.</li>
+              <li>O teste de DNA-HPV é adotado progressivamente; o Papanicolau permanece disponível onde o novo teste ainda não é oferecido.</li>
+            </ul>
+          </article>
 
-            <div class="cardFeminina">
-              <img src="./img/exameHPV.png" alt="Ícone exame HPV" />
-              <h3>A partir dos 25 anos</h3>
-                <ul>
-                    <li>Papanicolau (preventivo) – a cada 3 anos se não houver alterações</li>
-                    <li>Rastreio do HPV se indicado</li>
-                </ul>            
-            </div>
-            
-            <div class="cardFeminina">
-              <img src="./img/cardiologico.jpg" alt="Ícone exame cardiologico" />
-              <h3>A partir dos 30 anos</h3>
-                <ul>
-                    <li>Check-up anual com clínico geral</li>
-                    <li>Exames de sangue mais completos</li>
-                    <li>Aferição da pressão arterial e glicemia</li>
-                    <li>Exames cardiovasculares iniciais se houver histórico familiar ou fatores de risco</li>
-                </ul>            
-            </div>
+          <article class="cardFeminina">
+            <img src="./img/cardiologico.webp" alt="Avaliação da saúde cardiovascular" width="90" height="90" loading="lazy">
+            <h3>A partir dos 30 anos</h3>
+            <ul>
+              <li>Mantenha acompanhamento de pressão arterial e fatores de risco cardiovascular.</li>
+              <li>Informe à equipe de saúde seu histórico pessoal e familiar.</li>
+              <li>Exames complementares dependem da avaliação clínica.</li>
+            </ul>
+          </article>
 
-            <div class="cardFeminina">
-              <img src="./img/mamografia.png" alt="Ícone exame mamografia" />
-              <h3>A partir dos 40 anos</h3>
-                <ul>
-                    <li>Mamografia anual ou bianual (dependendo do histórico familiar)</li>
-                    <li>Exames cardiovasculares mais detalhados (eletrocardiograma, teste ergométrico, ecocardiograma se indicado)</li>
-                </ul>            
-            </div>
+          <article class="cardFeminina">
+            <img src="./img/mamografia.webp" alt="Equipamento utilizado em exames de mamografia" width="90" height="90" loading="lazy">
+            <h3>A partir dos 40 anos</h3>
+            <ul>
+              <li>Procure atendimento se perceber alterações nas mamas em qualquer idade.</li>
+              <li>A mamografia antes dos 50 anos pode ser indicada individualmente conforme sintomas e fatores de risco.</li>
+            </ul>
+          </article>
 
-            <div class="cardFeminina">
-              <img src="./img/colonoscopia.png" alt="Ícone exame colonoscopia" />
-              <h3>A partir dos 50 anos</h3>
-                <ul>
-                    <li>Colonoscopia (a cada 5 anos, ou antes se houver risco)</li>
-                    <li>Continuidade dos exames laboratoriais e ginecológicos</li>
-                    <li>Monitoramento para osteoporose (densitometria óssea pode ser indicada)</li>
-                </ul>            
-            </div>
-          </div>
+          <article class="cardFeminina">
+            <img src="./img/colonoscopia.webp" alt="Profissional orientando paciente sobre exames preventivos" width="90" height="90" loading="lazy">
+            <h3>A partir dos 50 anos</h3>
+            <ul>
+              <li>O SUS recomenda mamografia de rastreamento dos 50 aos 74 anos, a cada dois anos.</li>
+              <li>O teste imunoquímico fecal é referência para o rastreamento colorretal dos 50 aos 75 anos.</li>
+              <li>Outros exames são definidos conforme a avaliação individual.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
 
-        </section>
+      <section class="boxPrevencaoMasculina" id="prevencao-masculina" aria-labelledby="male-title">
+        <h2 id="male-title">Prevenção masculina</h2>
+        <p class="sectionIntro">O acompanhamento preventivo considera sintomas, histórico familiar, condições de saúde e decisões compartilhadas com profissionais.</p>
 
-        <section class="boxPrevencaoMasculina">
-          <h2>Prevenção Masculina</h2>
+        <div class="containerPrevencaoMasculina">
+          <article class="cardMasculina">
+            <img src="./img/vacina2.webp" alt="Jovem recebendo uma vacina" width="90" height="90" loading="lazy">
+            <h3>A partir dos 15 anos</h3>
+            <ul>
+              <li>Mantenha a vacinação atualizada conforme o calendário do SUS.</li>
+              <li>Procure avaliação se perceber dor, nódulos ou alterações persistentes nos testículos.</li>
+              <li>Converse sobre prevenção de ISTs e saúde sexual.</li>
+            </ul>
+          </article>
 
-          <div class="containerPrevencaoMasculina">
-          
-            <div class="cardMasculina">
-              <img src="./img/vacina2.jpg" alt="Ícone rapaz tomando vacina" />
-              <h3>A partir dos 15 anos</h3>
-                <ul>
-                    <li>Autoexame testicular (mensal, após o banho)</li>
-                    <li>Atenção a alterações: tamanho, dor, nódulos</li>
-                    <li>Vacinação em dia (hepatite B, tétano, HPV, influenza, covid)</li>
-                </ul>            
-            </div>
+          <article class="cardMasculina">
+            <img src="./img/exameVista.webp" alt="Profissional realizando avaliação oftalmológica" width="90" height="90" loading="lazy">
+            <h3>A partir dos 20 anos</h3>
+            <ul>
+              <li>Avaliações odontológicas e oftalmológicas podem ser indicadas conforme necessidade.</li>
+              <li>Discuta hábitos saudáveis, saúde mental e fatores de risco individuais.</li>
+            </ul>
+          </article>
 
-            <div class="cardMasculina">
-              <img src="./img/exameVista.png" alt="Ícone exame oftalmológico"/>
-              <h3>A partir dos 20 anos</h3>
-                <ul>
-                    <li>Exames de sangue e urina</li>
-                    <li>Avaliação odontológica e oftalmológica</li>   
-                </ul>            
-            </div>
+          <article class="cardMasculina">
+            <img src="./img/exameCardiologico.webp" alt="Acompanhamento da saúde cardiovascular" width="90" height="90" loading="lazy">
+            <h3>A partir dos 30 anos</h3>
+            <ul>
+              <li>Acompanhe pressão arterial e condições clínicas relevantes.</li>
+              <li>Exames laboratoriais e cardiovasculares devem ser solicitados conforme avaliação profissional.</li>
+              <li>Compartilhe antecedentes familiares e sintomas persistentes.</li>
+            </ul>
+          </article>
 
-            <div class="cardMasculina">
-              <img src="./img/exameCardiologico.jpg" alt="Ícone exame cardiologico" />
-              <h3>A partir dos 30 anos</h3>
-                <ul>
-                    <li>Check-up anual com clínico geral</li>
-                    <li>Exames de sangue mais completos</li>
-                    <li>Aferição da pressão arterial</li>
-                    <li>Glicemia de jejum </li>
-                    <li>Avaliação dermatológica</li>
-                    <li>Avaliação cardiovascular inicial </li>
-                </ul>            
-            </div>
-            
-            <div class="cardMasculina">
-              <img src="./img/exameSangue2.png" alt="Ícone exame de sangue" />
-              <h3>A partir dos 40 anos</h3>
-                <ul>
-                    <li>Exames cardiovasculares</li>
-                    <li>Exames de sangue e urina anuais continuam</li>
-                    <li>Se houver histórico familiar de câncer de cólon ou próstata, antecipar rastreamento</li>    
-                </ul>            
-            </div>
+          <article class="cardMasculina">
+            <img src="./img/exameSangue2.webp" alt="Profissional preparando coleta de sangue" width="90" height="90" loading="lazy">
+            <h3>A partir dos 40 anos</h3>
+            <ul>
+              <li>Reavalie fatores de risco cardiovascular e histórico familiar com sua equipe de saúde.</li>
+              <li>A decisão sobre exames adicionais depende de sintomas e necessidades individuais.</li>
+            </ul>
+          </article>
 
-            <div class="cardMasculina">
-              <img src="./img/exameColonoscopia.png" alt="Ícone idoso realizando exame" />
-              <h3>A partir dos 50 anos</h3>
-                <ul>
-                    <li>Colonoscopia (a cada 5 anos)</li>
-                    <li>Exame de próstata (PSA + toque retal)</li>
-                    <li>Continuidade dos exames laboratoriais e cardiovasculares</li>
-                </ul>            
-            </div>
+          <article class="cardMasculina">
+            <img src="./img/exameColonoscopia.webp" alt="Paciente recebendo orientação sobre exames preventivos" width="90" height="90" loading="lazy">
+            <h3>A partir dos 50 anos</h3>
+            <ul>
+              <li>O teste imunoquímico fecal é referência para o rastreamento colorretal dos 50 aos 75 anos.</li>
+              <li>O rastreamento populacional do câncer de próstata não é recomendado; converse sobre riscos e benefícios antes de decidir.</li>
+              <li>Procure avaliação se perceber sintomas urinários ou outras alterações.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
 
-          </div>          
+      <section class="alertasImportantes" id="alertas" aria-labelledby="alerts-title">
+        <h2 id="alerts-title">Alertas importantes</h2>
 
-        </section>
+        <div class="alertasContainer">
+          <article class="alertCard rosa">
+            <h3><img src="./img/iconCoracao.png" alt="" width="30" height="30" loading="lazy">Conheça suas mamas</h3>
+            <p>Observe alterações persistentes, como nódulos, mudanças na pele ou saída espontânea de secreção, e procure avaliação profissional.</p>
+          </article>
 
-        <section class="alertasImportantes">
-          <h2>Alertas Importantes</h2>
+          <article class="alertCard azul">
+            <h3><img src="./img/iconEscudo.png" alt="" width="30" height="30" loading="lazy">Atenção aos sintomas</h3>
+            <p>Dor, inchaço, nódulos ou alterações urinárias devem ser avaliados por profissionais de saúde, sem substituir o acompanhamento clínico.</p>
+          </article>
 
-          <div class="alertasContainer">
+          <article class="alertCard verde">
+            <h3><img src="./img/iconVacina.png" alt="" width="30" height="30" loading="lazy">Vacinas em dia</h3>
+            <p>Consulte a unidade de saúde para atualizar sua carteira de vacinação de acordo com o calendário nacional e suas condições clínicas.</p>
+          </article>
 
-            <div class="alertCard rosa">
-              <h3>
-                <img src="./img/iconCoracao.png" alt="">
-                Autoexame das Mamas
-              </h3>
-              <p>
-                Realize o autoexame das mamas todo mês, entre o 7º e 10º dia após o início da menstruação. Para mulheres na menopausa, escolha um dia fixo.
+          <article class="alertCard amarelo">
+            <h3><img src="./img/iconCerebro.png" alt="" width="30" height="30" loading="lazy">Saúde mental</h3>
+            <p>Cuide do sono, reserve momentos de descanso e procure apoio profissional sempre que perceber sofrimento emocional persistente.</p>
+          </article>
+        </div>
 
-              </p>
-            </div>
-
-            <div class="alertCard azul">
-              <h3>
-                <img src="./img/iconEscudo.png" alt="">
-                Autoexame dos Testículos
-              </h3>
-              <p>
-                Homens e pessoas com testículos devem realizar o autoexame mensalmente, de preferência após o banho, para identificar alterações como nódulos ou inchaços.
-
-              </p>
-            </div>
-
-            <div class="alertCard verde">
-              <h3>
-                <img src="./img/iconVacina.png" alt="">
-                Vacinas em Dia
-              </h3>
-              <p>
-                Todos devem manter a carteira de vacinação atualizada. Algumas vacinas precisam de reforço na idade adulta, como tétano, difteria e hepatite B.
-
-              </p>
-            </div>
-
-            <div class="alertCard amarelo">
-              <h3>
-                <img src="./img/iconCerebro.png" alt="">
-                Saúde Mental
-              </h3>
-              <p>
-                Cuidar da mente é tão importante quanto do corpo. Reserve momentos para relaxar, dormir bem e buscar apoio se sentir necessidade.
-
-              </p>
-            </div>
-
-          </div>
-        </section> 
+        <p class="medicalDisclaimer">Conteúdo educativo. Estas informações não substituem consulta, diagnóstico ou orientação individual de profissionais de saúde.</p>
+      </section>
     </main>
 
     <footer class="footer">
       <div class="footerContainer">
-
         <div class="footerApoio">
-          <img src="./img/LogoVivaBem.png" alt="Logo Viva Bem" class="footerLogo">
-          <p class="footerFrase">"Prevenção é cuidado com você"</p>
-          <p>Conectando pessoas através da <br> sustentabilidade e tecnologia.</p>
+          <img src="./img/LogoVivaBem.png" alt="Viva Bem" class="footerLogo" width="130" height="45" loading="lazy">
+          <p class="footerFrase">Prevenção é cuidado com você.</p>
+          <p>Projeto educacional sobre saúde preventiva e informações confiáveis.</p>
         </div>
 
-        <div class="footerApoio">
-          <h3>Links Úteis</h3>
+        <nav class="footerApoio" aria-label="Fontes oficiais de saúde">
+          <h3>Fontes oficiais</h3>
           <ul>
-            <li>Ministério da Saúde</li>
-            <li>INCA - Instituto Nacional do Câncer</li>
-            <li>SUS - Sistema Único de Saúde</li>
+            <li><a href="https://www.gov.br/saude/pt-br" target="_blank" rel="noopener noreferrer">Ministério da Saúde</a></li>
+            <li><a href="https://www.gov.br/inca/pt-br" target="_blank" rel="noopener noreferrer">Instituto Nacional de Câncer</a></li>
+            <li><a href="https://www.gov.br/saude/pt-br/composicao/saes/atencao-ao-cancer/faq/faq/como-funciona-o-rastreamento-do" target="_blank" rel="noopener noreferrer">Rastreamento no SUS</a></li>
+          </ul>
+        </nav>
+
+        <div class="footerApoio">
+          <h3>Contato e apoio</h3>
+          <ul>
+            <li>Disque Saúde: <a href="tel:136">136</a></li>
+            <li>SAMU: <a href="tel:192">192</a></li>
+            <li>Em emergências, procure atendimento imediato.</li>
           </ul>
         </div>
-
-        <div class="footerApoio">
-          <h3>Contato e Apoio</h3>
-          <ul>
-            <li>Disque Saúde: 136</li>
-            <li>sac@saude.gov.br</li>
-            <li>Em caso de emergência, procure<br>
-                imediatamente uma unidade de saúde<br>
-                ou ligue para o SAMU: 192
-            </li>
-          </ul>
-        </div>
-
       </div>
 
       <div class="footerRodape">
-        <p>
-        © 2025 Agenda de Saúde Preventiva. Informações baseadas em diretrizes médicas nacionais e internacionais.
-        </p>
+        <p>© <span id="current-year">2026</span> Viva Bem. Projeto educacional sem vínculo com instituições de saúde.</p>
       </div>
     </footer>
-
   </body>
 </html>

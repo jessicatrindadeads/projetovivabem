@@ -1,414 +1,494 @@
-@import url("https://fonts.googleapis.com/css2?family=Chau+Philomene+One:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;600;700&display=swap");
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: #04031c;
+  font-family: "Roboto", sans-serif;
+  line-height: 1.55;
+}
+
+a {
+  color: inherit;
   text-decoration: none;
 }
 
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid #1173d4;
+  outline-offset: 4px;
+}
+
+.skipLink {
+  position: absolute;
+  z-index: 3;
+  top: -100px;
+  left: 1rem;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  background: #ffffff;
+  color: #04031c;
+}
+.skipLink:focus {
+  top: 1rem;
+}
+
 header {
-  min-height: 100vh;
-  width: 100%;
   display: flex;
-  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
   align-items: center;
-  background-image: url("./img/bannerHeader.png");
+  flex-direction: column;
+  background-image: url("./img/bannerHeader.webp");
+  background-position: right center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: right center;
 }
 header .boxHeader {
-  margin-top: 30px;
-  width: 85%;
-  height: 80px;
-  border-radius: 50px;
+  position: relative;
   display: flex;
+  width: min(85%, 1320px);
+  min-height: 80px;
+  margin-top: 30px;
+  padding: 0 50px;
   align-items: center;
   justify-content: space-between;
-  padding: 0 50px;
+  border-radius: 50px;
   background: linear-gradient(to right, #4247a2, #52b095);
 }
 header .boxHeader nav {
   display: flex;
+  align-items: center;
   gap: 50px;
 }
 header .boxHeader nav a {
-  color: white;
-  text-decoration: none;
-  font-family: "Roboto", sans-serif;
-  font-size: 18px;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.brandLink {
+  display: inline-flex;
+  align-items: center;
+}
+.brandLink img {
+  width: 130px;
+  height: auto;
+}
+
+.menuToggle {
+  display: none;
+  width: 44px;
+  height: 44px;
+  padding: 10px;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+.menuToggle span {
+  width: 24px;
+  height: 2px;
+  border-radius: 2px;
+  background: #ffffff;
 }
 
 .boxBanner {
-  width: 80%;
-  min-height: 60vh;
   display: flex;
-  align-items: center;
+  width: min(80%, 1240px);
+  min-height: 65vh;
   margin: 0 auto;
+  align-items: center;
 }
 .boxBanner .boxTitulo {
-  width: 50%;
-  max-width: 600px;
+  width: 52%;
+  max-width: 620px;
 }
 .boxBanner .boxTitulo h1 {
-  font-size: 52px;
-  font-weight: bold;
-  line-height: 1.2;
   background: linear-gradient(to right, #4247a2, #52b095);
   background-clip: text;
-  -webkit-background-clip: text;
+  font-size: clamp(2.3rem, 5vw, 3.25rem);
+  font-weight: 700;
+  line-height: 1.2;
   -webkit-text-fill-color: transparent;
 }
-.boxBanner .boxTitulo p {
-  font-size: 24px;
-  color: #04031C;
+.boxBanner .boxTitulo > p {
   margin-top: 20px;
-}
-.boxBanner .boxTitulo .boxButton {
-  margin-top: 30px;
-  display: flex;
-  gap: 20px;
-}
-.boxBanner .boxTitulo .boxButton .buttonIdade {
-  width: 260px;
-  height: 48px;
-  border-radius: 12px;
-  border: none;
-  color: white;
-  background-color: #1173D4;
-  font-size: 16px;
-  cursor: pointer;
-}
-.boxBanner .boxTitulo .boxButton .buttonMais {
-  width: 170px;
-  height: 48px;
-  border-radius: 12px;
-  border: 1px solid #1173D4;
-  color: #1173D4;
-  background-color: white;
-  font-size: 16px;
-  cursor: pointer;
+  color: #04031c;
+  font-size: clamp(1.05rem, 2vw, 1.35rem);
 }
 
-.boxCardConteudo {
+.boxButton {
   display: flex;
-  justify-content: center;
-  gap: 30px;
+  margin-top: 30px;
   flex-wrap: wrap;
+  gap: 20px;
+}
+.boxButton a {
+  display: inline-flex;
+  min-height: 48px;
+  padding: 0.75rem 1.25rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.boxButton .buttonIdade {
+  min-width: 220px;
+  border: 1px solid #1173d4;
+  background: #1173d4;
+  color: #ffffff;
+}
+.boxButton .buttonMais {
+  min-width: 150px;
+  border: 1px solid #1173d4;
+  background: #ffffff;
+  color: #1173d4;
+}
+
+.boxConteudo,
+.boxPrevencaoFeminina,
+.boxPrevencaoMasculina,
+.alertasImportantes {
+  padding: 70px 20px;
+  scroll-margin-top: 1rem;
+  text-align: center;
+}
+.boxConteudo > h2,
+.boxPrevencaoFeminina > h2,
+.boxPrevencaoMasculina > h2,
+.alertasImportantes > h2 {
+  margin-bottom: 20px;
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+  line-height: 1.25;
 }
 
 .boxConteudo {
-  text-align: center;
-  padding: 60px 20px;
-  background-color: #f3f4f6;
-  font-family: Arial, sans-serif;
+  background: #f3f4f6;
 }
-.boxConteudo h2 {
-  font-size: 36px;
-  margin-bottom: 20px;
-  background: linear-gradient(90deg, #1173D4, #33CC73);
+.boxConteudo > h2 {
+  background: linear-gradient(90deg, #1173d4, #33cc73);
   background-clip: text;
-  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.boxConteudo p {
-  max-width: 800px;
-  margin: 0 auto 40px auto;
-  font-size: 18px;
-  color: #333;
-  line-height: 1.6;
+.boxConteudo > p {
+  max-width: 820px;
+  margin: 0 auto 40px;
+  color: #333333;
+  font-size: 1.05rem;
+}
+
+.boxCardConteudo,
+.containerPrevencaoFeminina,
+.containerPrevencaoMasculina,
+.alertasContainer {
+  display: flex;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
 }
 
 .cardConteudo {
-  background-color: white;
   width: 260px;
   padding: 30px 20px;
   border-radius: 12px;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-  transition: 0.3s;
+  background: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 .cardConteudo img {
   width: 60px;
+  height: 60px;
   margin-bottom: 15px;
+  object-fit: contain;
 }
 .cardConteudo h3 {
-  font-size: 20px;
   margin-bottom: 10px;
-  color: #222;
+  color: #222222;
+  font-size: 1.2rem;
 }
 .cardConteudo p {
-  font-size: 16px;
-  color: #555;
+  color: #555555;
+  font-size: 0.98rem;
 }
 
-.containerPrevencaoFeminina {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
+.sectionIntro {
+  max-width: 760px;
+  margin: 0 auto 35px;
+  color: #40404c;
+}
+
+.containerPrevencaoFeminina,
+.containerPrevencaoMasculina {
   max-width: 1100px;
-  margin: 0 auto;
 }
 
 .boxPrevencaoFeminina {
-  text-align: center;
-  padding: 60px 20px;
-  background-color: #e9dddd;
-  font-family: Arial, sans-serif;
+  background: #e9dddd;
 }
-.boxPrevencaoFeminina h2 {
-  font-size: 36px;
-  margin-bottom: 40px;
-  color: #d05aa0;
-  background: linear-gradient(90deg, #D038AA, #F9016F, #930885, #851C87);
+.boxPrevencaoFeminina > h2 {
+  background: linear-gradient(90deg, #d038aa, #f9016f, #930885, #851c87);
   background-clip: text;
-  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
-
-.cardFeminina {
-  background-color: white;
-  width: 280px;
-  padding: 25px;
-  border-radius: 15px;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-  text-align: left;
-  transition: 0.3s;
-}
-.cardFeminina img {
-  width: 90px;
-  height: 90px;
-  border-radius: 50%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  display: block;
-  margin: 0 auto 15px auto;
-}
-.cardFeminina h3 {
-  text-align: center;
-  margin-bottom: 15px;
-  font-size: 18px;
-  color: #222;
-}
-.cardFeminina ul {
-  padding-left: 18px;
-}
-.cardFeminina li {
-  margin-bottom: 8px;
-  font-size: 14px;
-  color: #444;
-}
-
-.containerPrevencaoMasculina {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-  max-width: 1100px;
-  margin: 0 auto;
 }
 
 .boxPrevencaoMasculina {
-  text-align: center;
-  padding: 60px 20px;
-  background-color: #eeeeee;
-  font-family: Arial, sans-serif;
+  background: #eeeeee;
 }
-.boxPrevencaoMasculina h2 {
-  font-size: 36px;
-  margin-bottom: 40px;
-  background: linear-gradient(90deg, #0074EE, #3373D2, #5EA7EF, #6F95C7, #7BB5F5);
+.boxPrevencaoMasculina > h2 {
+  background: linear-gradient(90deg, #0074ee, #3373d2, #5ea7ef, #6f95c7);
   background-clip: text;
-  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
+.cardFeminina,
 .cardMasculina {
-  background-color: white;
+  width: 300px;
   padding: 25px;
   border-radius: 15px;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  background: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   text-align: left;
-  transition: 0.3s;
-  width: 280px;
 }
-.cardMasculina img {
+.cardFeminina > img,
+.cardMasculina > img {
+  display: block;
   width: 90px;
   height: 90px;
+  margin: 0 auto 15px;
   border-radius: 50%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  display: block;
-  margin: 0 auto 15px auto;
+  object-fit: cover;
 }
+.cardFeminina h3,
 .cardMasculina h3 {
-  text-align: center;
   margin-bottom: 15px;
-  font-size: 18px;
-  color: #222;
+  color: #222222;
+  font-size: 1.1rem;
+  text-align: center;
 }
+.cardFeminina ul,
 .cardMasculina ul {
   padding-left: 18px;
 }
+.cardFeminina li,
 .cardMasculina li {
-  margin-bottom: 8px;
-  font-size: 14px;
-  color: #444;
+  margin-bottom: 10px;
+  color: #444444;
+  font-size: 0.9rem;
 }
 
 .alertasImportantes {
-  text-align: center;
-  padding: 60px 20px;
-  background-color: #f5f5f5;
-  font-family: Arial, sans-serif;
+  background: #f5f5f5;
 }
-.alertasImportantes h2 {
-  font-size: 36px;
-  margin-bottom: 40px;
-  background: linear-gradient(90deg, #1173D4, #33CC73);
+.alertasImportantes > h2 {
+  background: linear-gradient(90deg, #1173d4, #33cc73);
   background-clip: text;
-  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .alertasContainer {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-  max-width: 900px;
-  margin: 0 auto;
+  max-width: 950px;
+  margin-top: 35px;
 }
 
 .alertCard {
-  width: 410px;
-  height: 170px;
+  width: 430px;
+  min-height: 170px;
   padding: 25px;
   border-radius: 10px;
+  text-align: left;
+}
+.alertCard h3 {
+  display: flex;
+  margin-bottom: 12px;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.1rem;
 }
 .alertCard img {
   width: 30px;
+  height: 30px;
+  object-fit: contain;
 }
-
-h3 {
-  display: flex;
-  font-weight: 700;
-  font-style: bold;
-  font-size: 20px;
-  line-height: 45px;
-  align-items: center;
-  gap: 10px;
-}
-
-p {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 20px;
-  align-items: center;
+.alertCard p {
+  font-size: 0.95rem;
 }
 
 .rosa {
-  background-color: #F9D5E5;
-}
-.rosa h3, .rosa p {
-  color: #AD346A;
+  background: #f9d5e5;
+  color: #8f2756;
 }
 
 .azul {
-  background-color: #CFE2F3;
-}
-.azul h3, .azul p {
-  color: #2769A3;
+  background: #cfe2f3;
+  color: #22557f;
 }
 
 .verde {
-  background-color: #D4EDDA;
-}
-.verde h3, .verde p {
-  color: #244A2D;
+  background: #d4edda;
+  color: #244a2d;
 }
 
 .amarelo {
-  background-color: #FFE9C2;
+  background: #ffe9c2;
+  color: #765100;
 }
-.amarelo h3, .amarelo p {
-  color: #976C00;
+
+.medicalDisclaimer {
+  max-width: 760px;
+  margin: 35px auto 0;
+  color: #444444;
+  font-size: 0.95rem;
 }
 
 .footer {
-  background-color: #313461;
-  color: white;
   padding: 50px 20px;
+  background: #313461;
+  color: #ffffff;
   font-family: "Poppins", sans-serif;
 }
 
 .footerContainer {
+  display: grid;
   max-width: 1200px;
   margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 45px;
 }
 
-.footerApoio {
-  width: 30%;
-}
 .footerApoio h3 {
   margin-bottom: 15px;
+  font-size: 1.1rem;
 }
 .footerApoio ul {
   list-style: none;
 }
-.footerApoio li {
-  margin-bottom: 8px;
-  font-size: 14px;
-}
+.footerApoio li,
 .footerApoio p {
-  font-size: 14px;
-  line-height: 1.6;
+  margin-bottom: 8px;
+  font-size: 0.88rem;
+  line-height: 1.7;
+}
+.footerApoio a {
+  color: #ffffff;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .footerLogo {
   width: 130px;
+  height: auto;
   margin-bottom: 10px;
 }
 
 .footerFrase {
   font-style: italic;
-  margin-bottom: 10px;
 }
 
 .footerRodape {
-  border-top: 1px solid rgba(255, 255, 255, 0.3);
-  margin-top: 40px;
+  max-width: 1200px;
+  margin: 40px auto 0;
   padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  font-size: 0.9rem;
   text-align: center;
-  font-size: 16px;
 }
 
-@media (max-width: 768px) {
-  .boxHeader {
+@media (max-width: 900px) {
+  header .boxHeader {
+    width: min(92%, 900px);
+    padding-inline: 25px;
+  }
+  header .boxHeader nav {
+    gap: 22px;
+  }
+  header .boxHeader nav a {
+    font-size: 0.9rem;
+  }
+  .boxBanner .boxTitulo {
+    width: 70%;
+  }
+}
+@media (max-width: 680px) {
+  header {
+    min-height: 78vh;
+    background-position: 65% center;
+  }
+  header .boxHeader {
+    min-height: 68px;
+    margin-top: 18px;
+    padding-inline: 18px;
+  }
+  header .boxHeader nav {
+    position: absolute;
+    z-index: 2;
+    top: calc(100% + 10px);
+    right: 0;
+    display: none;
+    width: min(280px, 100%);
+    padding: 18px;
+    align-items: stretch;
     flex-direction: column;
-    height: auto;
-    padding: 20px;
-    gap: 10px;
+    gap: 16px;
+    border-radius: 16px;
+    background: #4247a2;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
   }
-  nav {
-    gap: 20px;
+  header .boxHeader nav.isOpen {
+    display: flex;
   }
-  .boxTitulo {
+  .brandLink img {
+    width: 110px;
+  }
+  .menuToggle {
+    display: flex;
+  }
+  .boxBanner {
+    width: 88%;
+    min-height: 62vh;
+  }
+  .boxBanner .boxTitulo {
     width: 100%;
-    text-align: center;
+    max-width: 450px;
+    padding: 1.2rem;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.75);
   }
   .boxButton {
-    flex-direction: column;
-    align-items: center;
+    gap: 12px;
   }
+  .boxButton a {
+    width: 100%;
+  }
+  .boxConteudo,
+  .boxPrevencaoFeminina,
+  .boxPrevencaoMasculina,
+  .alertasImportantes {
+    padding: 55px 18px;
+  }
+  .cardConteudo,
   .cardFeminina,
-  .cardMasculina {
-    width: 90%;
+  .cardMasculina,
+  .alertCard {
+    width: min(100%, 420px);
   }
   .footerContainer {
-    flex-direction: column;
-    gap: 30px;
+    grid-template-columns: 1fr;
+    gap: 28px;
   }
-}/*# sourceMappingURL=style.css.map */
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
